@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.montecode.app.summertangocamp.kolasin.TransportationFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:autoLink="all"
+            android:textColor="@color/secondary_text"
+            android:id="@+id/transport_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:padding="10dp" />
+    </ScrollView>
+
+</FrameLayout>
