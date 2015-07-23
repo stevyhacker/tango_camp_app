@@ -1,6 +1,7 @@
 package me.montecode.app.summertangocamp.kolasin;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 
 
 public class MainActivity extends ActionBarActivity
@@ -41,6 +44,20 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+
+        int currentapiVersion = android.os.Build.VERSION.SDK_INT;
+
+
+        if (currentapiVersion >= Build.VERSION_CODES.LOLLIPOP){
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(getResources().getColor(R.color.primary_dark_status));
+
+        }
+
+
     }
 
     @Override
@@ -63,7 +80,7 @@ public class MainActivity extends ActionBarActivity
 //                setTitle(getString(R.string.around_me));
 //                drawerLayout.closeDrawers();
                 break;
-            case 2:
+            case 5:
                 CampGuideFragment campGuideFragment = new CampGuideFragment();
                 FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
                 transaction1.replace(R.id.container, campGuideFragment);
@@ -72,16 +89,36 @@ public class MainActivity extends ActionBarActivity
                 setTitle(getString(R.string.camp_guide));
                 break;
             case 3:
-//                mTitle = getString(R.string.title_section3);
+                FoodFragment foodFragment = new FoodFragment();
+                FragmentTransaction transaction3 = getSupportFragmentManager().beginTransaction();
+                transaction3.replace(R.id.container, foodFragment);
+                transaction3.addToBackStack(null);
+                transaction3.commit();
+                setTitle(getString(R.string.food));
                 break;
-
-            case 5:
+            case 4:
+                ActivitiesFragment activitiesFragment = new ActivitiesFragment();
+                FragmentTransaction transaction4 = getSupportFragmentManager().beginTransaction();
+                transaction4.replace(R.id.container, activitiesFragment);
+                transaction4.addToBackStack(null);
+                transaction4.commit();
+                setTitle(getString(R.string.activities));
+                break;
+            case 2:
                 TransportationFragment transportFragment = new TransportationFragment();
                 FragmentTransaction transaction5 = getSupportFragmentManager().beginTransaction();
                 transaction5.replace(R.id.container, transportFragment);
                 transaction5.addToBackStack(null);
                 transaction5.commit();
-                setTitle(getString(R.string.camp_guide));
+                setTitle(getString(R.string.transport));
+                break;
+            case 6:
+                KaraokeFragment karaokeFragment = new KaraokeFragment();
+                FragmentTransaction transaction6 = getSupportFragmentManager().beginTransaction();
+                transaction6.replace(R.id.container, karaokeFragment);
+                transaction6.addToBackStack(null);
+                transaction6.commit();
+                setTitle(getString(R.string.karaoke));
                 break;
         }
     }

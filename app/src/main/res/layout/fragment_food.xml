@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.montecode.app.summertangocamp.kolasin.FoodFragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/restaurant_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurant_text"/>
+
+        <ImageView
+            android:id="@+id/restaurant_image_view"
+            android:layout_below="@+id/restaurant_text_view"
+            android:src="@drawable/restaurant"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_below="@+id/restaurant_image_view"
+            android:padding="10dp"
+            android:id="@+id/fragment_text_view"
+            android:autoLink="all"
+            android:text="@string/food_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
+</RelativeLayout>

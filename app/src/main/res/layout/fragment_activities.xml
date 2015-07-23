@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.montecode.app.summertangocamp.kolasin.ActivitiesFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/activities_top_image_view"
+            android:src="@drawable/tango_activities"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/activities_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoLink="all" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

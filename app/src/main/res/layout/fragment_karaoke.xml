@@ -1,19 +1,21 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="me.montecode.app.summertangocamp.kolasin.TransportationFragment">
+    tools:context="me.montecode.app.summertangocamp.kolasin.KaraokeFragment">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:autoLink="all"
-            android:id="@+id/transport_text_view"
+            android:id="@+id/karaoke_text_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text=""
+            android:layout_height="wrap_content"
+            android:autoLink="all"
             android:padding="10dp" />
+
     </ScrollView>
+
 
 </FrameLayout>

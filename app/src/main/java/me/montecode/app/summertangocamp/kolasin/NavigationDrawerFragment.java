@@ -104,7 +104,7 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.notifications),
                         getString(R.string.transport),
                         getString(R.string.food),
-                        getString(R.string.accommodation),
+                        getString(R.string.activities),
                         getString(R.string.camp_guide),
                         getString(R.string.karaoke),
                         getString(R.string.contact),
