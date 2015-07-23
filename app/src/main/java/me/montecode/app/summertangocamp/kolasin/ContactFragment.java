@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -23,7 +24,15 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact, container, false);
+
+        TextView appVersionTextView = (TextView) view.findViewById(R.id.app_version_text_view);
+
+        String versionName = BuildConfig.VERSION_NAME;
+
+        appVersionTextView.setText(getString(R.string.app_version) + "  " + versionName);
+
+        return view;
     }
 
 

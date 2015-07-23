@@ -49,7 +49,7 @@ public class MainActivity extends ActionBarActivity
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
 
 
-        if (currentapiVersion >= Build.VERSION_CODES.LOLLIPOP){
+        if (currentapiVersion >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -119,6 +119,14 @@ public class MainActivity extends ActionBarActivity
                 transaction6.addToBackStack(null);
                 transaction6.commit();
                 setTitle(getString(R.string.karaoke));
+                break;
+            case 7:
+                ContactFragment contactFragment = new ContactFragment();
+                FragmentTransaction transaction7 = getSupportFragmentManager().beginTransaction();
+                transaction7.replace(R.id.container, contactFragment);
+                transaction7.addToBackStack(null);
+                transaction7.commit();
+                setTitle(getString(R.string.contact));
                 break;
         }
     }
