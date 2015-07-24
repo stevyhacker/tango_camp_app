@@ -9,13 +9,13 @@
     <string name="transport">Transportation</string>
     <string name="accommodation">Accommodation</string>
     <string name="activities">Activities</string>
-    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
-    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_example" translatable="false">Example action</string>
+    <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
-    <string name="title_activity_main_tab" translatable="false">MainTabActivity</string>
+    <string name="title_activity_main_tab">MainTabActivity</string>
 
     <string name="hello_world">Hello world!</string>
 
@@ -32,7 +32,7 @@
 ]]>
 </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="karaoke" translatable="false">Karaoke</string>
+    <string name="karaoke">Karaoke</string>
     <string name="food_text">Food and drinks at the camp \n
 \n The official restaurant of the tango camp will this year also support this event with extremely low food prices! The price for one meal which includes soup, salad and main course will be only 4,5 euros. You can count that every day there will also be a vegetarian food option in the menu.
 Apart from that, within the high school "Braća Selić" there will be a bar open exclusively to the tango camp. You will find both food and drinks there at very affordable prices. The choice of food will depend on the experience on the ground. In any case, you can count on a relatively wide selection of sandwiches etc. Most, if not all accommodation has a kitchen so you can also organize your own food preparation. Bigger tours have the options of either taking your own food with you or making barbecue. In the case of barbecue, there will be previously organized money-gathering so that all the necessary groceries and ingredients are bought at the same time. If you carry your own food, have in mind that in the mountain you can become veeeery hungry, so take care not to underestimate yourself and start begging for food from others :) \n When it comes to water, PLEASE TAKE CARE TO ALWAYS BRING ENOUGH WATER WITH YOU, as there is an important mountain principle of everyone taking care of their own water. We will inform you how much water you should take so that you will have enough of it until the next source of water. </string>

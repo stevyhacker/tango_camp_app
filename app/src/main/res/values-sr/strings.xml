@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ljetnji Tango Kamp Kolašin</string>
+    <string name="accommodation">Smještaj</string>
+    <string name="about_app">O aplikaciji</string>
+    <string name="action_settings">Podešavanja</string>
+    <string name="activities">Aktivnosti</string>
+    <string name="app_info">Aplikaciju napravio:  Stevan Bogosavljević \n \nKontakt email: stevanbogosavljevic@gmail.com</string>
+    <string name="app_version">Verzija aplikacije:</string>
+    <string name="camp_guide">Kamp vodič</string>
+    <string name="contact">Kontakt</string>
+    <string name="facebook_links">Facebook linkovi:</string>
+    <string name="food">Hrana</string>
+    <string name="gallery">Galerija</string>
+    <string name="notifications">Obavještenja</string>
+    <string name="restaurant_text">Zvanični tango kamp restoran</string>
+    <string name="tn_mail">Tango Natural kontakt info:</string>
+    <string name="transport">Prevoz</string>
+</resources>
