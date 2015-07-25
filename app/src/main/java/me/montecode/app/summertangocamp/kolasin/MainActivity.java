@@ -57,6 +57,19 @@ public class MainActivity extends ActionBarActivity
 
         }
 
+        if (getIntent().getExtras() != null) {
+
+            Bundle extras = getIntent().getExtras();
+            String notificationType = extras.getString("notification");
+            if (notificationType.equalsIgnoreCase("parse")) {
+                NotificationsFragment notificationFragment = new NotificationsFragment();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, notificationFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                setTitle(getString(R.string.notifications));
+            }
+        }
 
     }
 
@@ -65,20 +78,19 @@ public class MainActivity extends ActionBarActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, PlaceholderFragment.newInstance(position))
                 .commit();
     }
 
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:
-//                SearchByGardenFragment searchByGardenFragment = new SearchByGardenFragment();
-//                FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
-//                transaction1.replace(R.id.fragment_container, searchByGardenFragment);
-//                transaction1.addToBackStack(null);
-//                transaction1.commit();
-//                setTitle(getString(R.string.around_me));
-//                drawerLayout.closeDrawers();
+                NotificationsFragment notificationFragment = new NotificationsFragment();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, notificationFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                setTitle(getString(R.string.notifications));
                 break;
             case 5:
                 CampGuideFragment campGuideFragment = new CampGuideFragment();
