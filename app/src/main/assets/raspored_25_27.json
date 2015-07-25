@@ -1,0 +1,62 @@
+{
+    "push_id": "raspored_25_27",
+    "silent": "false",
+    "alert": "Objavljen raspored za prva 3 dana- 25, 26, 27. 07.",
+    "additional_data": "*Sva okupljanja za rad na telu i polaske na izlete u toku tango kampa će uvijek biti ispred Centra za kulturu osim ako bude najavljeno drugačije. Takođe, kreće se na određenu destinaciju tačno u vreme koje je navedeno.",
+    "data": [
+        {
+            "day": "Subota 25.07.2015",
+            "activities": [
+                {
+                    "description": "21:00 – 02:00       PRVA MILONGA, DJ Sonja     Gimnazija"
+                }
+            ]
+        },
+        {
+            "day": "Nedelja 26.07.2015",
+            "activities": [
+                {
+                    "description": "11:30 - 13:00     Joga      Osnovna škola"
+                },
+                {
+                    "description": "12:00  - 15:00      Praktika      Gimnazija"
+                },
+                {
+                    "description": "17:00 – 18:30      Čas za srednji i viši nivo  / Darko y Sonja     Gimnazija"
+                },
+                {
+                    "description": "18:45 – 19:45      Tango aerobik ( uvodni, laganiji trening )       Osnovna škola"
+                },
+                {
+                    "description": "22:00 - 02:00      Milonga,  DJ Flegma        Gimnazija"
+                }
+            ]
+        },
+        {
+            "day": "Ponedjeljak 27.07.2015",
+            "activities": [
+                {
+                    "description": "11:30 - 13:00     Joga     Osnovna škola"
+                },
+                {
+                    "description": "11:30 - 13:30      Rad na telu u prirodi        okupljanje ispred Doma kulture*"
+                },
+                {
+                    "description": "12:00 – 15:00       Praktika            Gimnazija"
+                },
+                {
+                    "description": "17:00 – 18:30       Čas za potpune početnike / Mirko y Marija          Gimnazija"
+                },
+                {
+                    "description": "17:00 – 18:30       Čas za srednji i napredni nivo / Darko y Sonja         Osnovna škola"
+                },
+                {
+                    "description": "18:45          Biciklistička tura"
+                },
+                {
+                    "description": "22:00 – 02:00       Milonga,  DJ Sonja          Gimnazija"
+                }
+            ]
+        }
+    ]
+}

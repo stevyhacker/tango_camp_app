@@ -35,9 +35,13 @@ public class PushNotificationBroadcastReceiver extends ParsePushBroadcastReceive
             e.printStackTrace();
         }
         if (json != null) {
+
             Toast.makeText(context, json.toString(), Toast.LENGTH_SHORT).show();
             Log.e("WORKS", "YEAH");
             Log.e("JSON PARSE DATA ", json.toString());
+
+
+
         }
 
 

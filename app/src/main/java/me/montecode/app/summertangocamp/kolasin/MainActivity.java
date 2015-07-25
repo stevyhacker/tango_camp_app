@@ -17,6 +17,13 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.pixplicity.easyprefs.library.Prefs;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import io.realm.Realm;
+
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -71,6 +78,34 @@ public class MainActivity extends ActionBarActivity
             }
         }
 
+        Realm realm = Realm.getInstance(this);
+        InputStream is = null;
+
+        boolean jsonInputDone = Prefs.getBoolean("jsonInputDone", false);
+        if (!jsonInputDone) {
+
+            try {
+
+               if( Prefs.getString("subscribedToChannel","English").equalsIgnoreCase("English")){
+                   is = getAssets().open("schedule_25_27.json");
+                }
+                else {
+                   is = getAssets().open("raspored_25_27.json");
+               }
+
+                realm.beginTransaction();
+                realm.createObjectFromJson(Schedule.class, is);
+                realm.commitTransaction();
+
+                Prefs.putBoolean("jsonInputDone", true);
+            }
+
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
     }
 
     @Override
@@ -78,7 +113,7 @@ public class MainActivity extends ActionBarActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position))
+                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                 .commit();
     }
 
@@ -157,7 +192,7 @@ public class MainActivity extends ActionBarActivity
             // Only show items in the action bar relevant to this screen
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.main, menu);
+//            getMenuInflater().inflate(R.menu.main, menu);
             restoreActionBar();
             return true;
         }
@@ -172,9 +207,9 @@ public class MainActivity extends ActionBarActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
