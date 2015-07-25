@@ -42,7 +42,7 @@ public class NotificationsFragment extends Fragment {
 
         Realm realm = Realm.getInstance(getActivity().getApplicationContext());
         RealmQuery<Schedule> query = realm.where(Schedule.class);
-        RealmResults<Schedule> scheduleRealmResults = query.findAll();
+        RealmResults<Schedule> scheduleRealmResults = query.findAllSorted("sorter_date",false);
         ArrayList<String> dayActivityDescriptions = new ArrayList<String>();
         ArrayList<String> days = new ArrayList<String>();
         ArrayList<String> alerts = new ArrayList<String>();

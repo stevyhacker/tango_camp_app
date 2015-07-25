@@ -16,7 +16,6 @@ import java.nio.charset.Charset;
 
 import io.realm.Realm;
 import io.realm.RealmQuery;
-import io.realm.RealmResults;
 
 /**
  * Created by stevyhacker on 16.6.15..
@@ -62,19 +61,13 @@ public class PushNotificationBroadcastReceiver extends ParsePushBroadcastReceive
             }
 
             try {
-                RealmResults<Schedule> realmResults = query.contains("push_id", json.getString("push_id"), true).findAll();
+                InputStream stream = new ByteArrayInputStream(json.toString().getBytes(Charset.forName("UTF-8")));
 
-                if (!realmResults.isEmpty()) {
+                realm.beginTransaction();
+                realm.createOrUpdateObjectFromJson(Schedule.class, stream);
+                realm.commitTransaction();
 
-                    InputStream stream = new ByteArrayInputStream(json.toString().getBytes(Charset.forName("UTF-8")));
 
-                    realm.beginTransaction();
-                    realm.createOrUpdateObjectFromJson(Schedule.class, stream);
-                    realm.commitTransaction();
-
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }

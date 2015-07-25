@@ -58,24 +58,27 @@ public class TangoApplication extends Application {
 
         if (!Prefs.getBoolean("languageSubscribed", false)) {
             if (Locale.getDefault().getLanguage().equalsIgnoreCase("sr") || Locale.getDefault().getLanguage().equalsIgnoreCase("bs") || Locale.getDefault().getLanguage().equalsIgnoreCase("hr")) {
+                Prefs.putString("subscribedToChannel", "Srpski");
+
                 ParsePush.subscribeInBackground("Srpski", new SaveCallback() {
                     @Override
                     public void done(ParseException e) {
                         if (e == null) {
                             Log.d("com.parse.push", "successfully subscribed to the broadcast channel.");
-                            Prefs.putString("subscribedToChannel","Srpski");
+
                         } else {
                             Log.e("com.parse.push", "failed to subscribe for push", e);
                         }
                     }
                 });
             } else {
+                Prefs.putString("subscribedToChannel", "English");
+
                 ParsePush.subscribeInBackground("English", new SaveCallback() {
                     @Override
                     public void done(ParseException e) {
                         if (e == null) {
                             Log.d("com.parse.push", "successfully subscribed to the broadcast channel.");
-                            Prefs.putString("subscribedToChannel", "English");
 
                         } else {
                             Log.e("com.parse.push", "failed to subscribe for push", e);

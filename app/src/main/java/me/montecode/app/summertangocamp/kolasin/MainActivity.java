@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -79,21 +80,19 @@ public class MainActivity extends ActionBarActivity {
 
             try {
 
-               if( Prefs.getString("subscribedToChannel","English").equalsIgnoreCase("English")){
-                   is = getAssets().open("schedule_25_27.json");
+                Log.e("subscribedToChannel", Prefs.getString("subscribedToChannel", "English"));
+                if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
+                    is = getAssets().open("schedule_25_27.json");
+                } else {
+                    is = getAssets().open("raspored_25_27.json");
                 }
-                else {
-                   is = getAssets().open("raspored_25_27.json");
-               }
-                //todo check later if this works properly
+
                 realm.beginTransaction();
                 realm.createObjectFromJson(Schedule.class, is);
                 realm.commitTransaction();
 
                 Prefs.putBoolean("jsonInputDone", true);
-            }
-
-            catch (IOException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
@@ -112,7 +111,6 @@ public class MainActivity extends ActionBarActivity {
         }
 
     }
-
 
 
     public void restoreActionBar() {
