@@ -64,6 +64,7 @@ Apart from that, within the high school "Braća Selić" there will be a bar open
     <string name="app_info">App developer:  Stevan Bogosavljević \n \nContact email: stevanbogosavljevic@gmail.com </string>
     <string name="under_construction">Under Construction</string>
     <string name="check_menu">Check the menu on left for info</string>
+    <string name="notification_info">The app will notify you when the schedule for next three days had been published.</string>
 
 </resources>
 

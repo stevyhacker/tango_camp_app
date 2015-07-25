@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -39,10 +40,6 @@ public class NavigationDrawerFragment extends Fragment {
      */
     private static final String PREF_USER_LEARNED_DRAWER = "navigation_drawer_learned";
 
-    /**
-     * A pointer to the current callbacks instance (the Activity).
-     */
-    private NavigationDrawerCallbacks mCallbacks;
 
     /**
      * Helper component that ties the action bar to the navigation drawer.
@@ -94,6 +91,67 @@ public class NavigationDrawerFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selectItem(position);
+
+                    switch (position+1) {
+                        case 1:
+                            NotificationsFragment notificationFragment = new NotificationsFragment();
+                            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                            transaction.replace(R.id.container, notificationFragment);
+                            transaction.addToBackStack(null);
+                            transaction.commit();
+                            getActivity().setTitle(getString(R.string.notifications));
+                            break;
+                        case 5:
+                            CampGuideFragment campGuideFragment = new CampGuideFragment();
+                            FragmentTransaction transaction1 = getActivity().getSupportFragmentManager().beginTransaction();
+                            transaction1.replace(R.id.container, campGuideFragment);
+                            transaction1.addToBackStack(null);
+                            transaction1.commit();
+                            getActivity().setTitle(getString(R.string.camp_guide));
+                            break;
+                        case 3:
+                            FoodFragment foodFragment = new FoodFragment();
+                            FragmentTransaction transaction3 = getActivity().getSupportFragmentManager().beginTransaction();
+                            transaction3.replace(R.id.container, foodFragment);
+                            transaction3.addToBackStack(null);
+                            transaction3.commit();
+                            getActivity().setTitle(getString(R.string.food));
+                            break;
+                        case 4:
+                            ActivitiesFragment activitiesFragment = new ActivitiesFragment();
+                            FragmentTransaction transaction4 = getActivity().getSupportFragmentManager().beginTransaction();
+                            transaction4.replace(R.id.container, activitiesFragment);
+                            transaction4.addToBackStack(null);
+                            transaction4.commit();
+                            getActivity().setTitle(getString(R.string.activities));
+                            break;
+                        case 2:
+                            TransportationFragment transportFragment = new TransportationFragment();
+                            FragmentTransaction transaction5 = getActivity().getSupportFragmentManager().beginTransaction();
+                            transaction5.replace(R.id.container, transportFragment);
+                            transaction5.addToBackStack(null);
+                            transaction5.commit();
+                            getActivity().setTitle(getString(R.string.transport));
+                            break;
+                        case 6:
+                            KaraokeFragment karaokeFragment = new KaraokeFragment();
+                            FragmentTransaction transaction6 = getActivity().getSupportFragmentManager().beginTransaction();
+                            transaction6.replace(R.id.container, karaokeFragment);
+                            transaction6.addToBackStack(null);
+                            transaction6.commit();
+                            getActivity().setTitle(getString(R.string.karaoke));
+                            break;
+                        case 7:
+                            ContactFragment contactFragment = new ContactFragment();
+                            FragmentTransaction transaction7 = getActivity().getSupportFragmentManager().beginTransaction();
+                            transaction7.replace(R.id.container, contactFragment);
+                            transaction7.addToBackStack(null);
+                            //todo fix the backstack
+                            transaction7.commit();
+                            getActivity().setTitle(getString(R.string.contact));
+                            break;
+                    }
+
             }
         });
         mDrawerListView.setAdapter(new ArrayAdapter<String>(
@@ -110,6 +168,8 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.contact),
 
                 }));
+
+
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }
@@ -200,25 +260,19 @@ public class NavigationDrawerFragment extends Fragment {
         if (mDrawerLayout != null) {
             mDrawerLayout.closeDrawer(mFragmentContainerView);
         }
-        if (mCallbacks != null) {
-            mCallbacks.onNavigationDrawerItemSelected(position);
-        }
+
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        try {
-            mCallbacks = (NavigationDrawerCallbacks) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException("Activity must implement NavigationDrawerCallbacks.");
-        }
+
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        mCallbacks = null;
+
     }
 
     @Override
@@ -269,13 +323,4 @@ public class NavigationDrawerFragment extends Fragment {
         return ((ActionBarActivity) getActivity()).getSupportActionBar();
     }
 
-    /**
-     * Callbacks interface that all activities using this fragment must implement.
-     */
-    public static interface NavigationDrawerCallbacks {
-        /**
-         * Called when an item in the navigation drawer is selected.
-         */
-        void onNavigationDrawerItemSelected(int position);
-    }
 }

@@ -4,15 +4,25 @@
     android:orientation="vertical"
     tools:context="me.montecode.app.summertangocamp.kolasin.NotificationsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:padding="10dp"
-        android:text="@string/under_construction" />
+    <!--<TextView android:layout_width="match_parent" android:layout_height="wrap_content"-->
+        <!--android:padding="10dp"-->
+        <!--android:textColor="@color/primary_text"-->
+        <!--android:text="@string/notification_info" />-->
 
-    <ImageView
-        android:adjustViewBounds="true"
-        android:src="@drawable/construction"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <!--<ImageView-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:src="@drawable/construction"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <ListView
+        android:id="@+id/notifications_list_view"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </ListView>
+
+
 </LinearLayout>

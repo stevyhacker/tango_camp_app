@@ -1,19 +1,13 @@
 package me.montecode.app.summertangocamp.kolasin;
 
-import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -25,8 +19,7 @@ import java.io.InputStream;
 import io.realm.Realm;
 
 
-public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class MainActivity extends ActionBarActivity {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -92,7 +85,7 @@ public class MainActivity extends ActionBarActivity
                 else {
                    is = getAssets().open("raspored_25_27.json");
                }
-
+                //todo check later if this works properly
                 realm.beginTransaction();
                 realm.createObjectFromJson(Schedule.class, is);
                 realm.commitTransaction();
@@ -103,80 +96,24 @@ public class MainActivity extends ActionBarActivity
             catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+
+        if (findViewById(R.id.container) != null) {
+
+            if (savedInstanceState != null) {
+                return;
+            }
+
+            NotificationsFragment searchByGardenFragment = new NotificationsFragment();
+            searchByGardenFragment.setArguments(getIntent().getExtras());
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, searchByGardenFragment).commit();
 
         }
 
     }
 
-    @Override
-    public void onNavigationDrawerItemSelected(int position) {
-        // update the main content by replacing fragments
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .commit();
-    }
 
-    public void onSectionAttached(int number) {
-        switch (number) {
-            case 1:
-                NotificationsFragment notificationFragment = new NotificationsFragment();
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.container, notificationFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-                setTitle(getString(R.string.notifications));
-                break;
-            case 5:
-                CampGuideFragment campGuideFragment = new CampGuideFragment();
-                FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
-                transaction1.replace(R.id.container, campGuideFragment);
-                transaction1.addToBackStack(null);
-                transaction1.commit();
-                setTitle(getString(R.string.camp_guide));
-                break;
-            case 3:
-                FoodFragment foodFragment = new FoodFragment();
-                FragmentTransaction transaction3 = getSupportFragmentManager().beginTransaction();
-                transaction3.replace(R.id.container, foodFragment);
-                transaction3.addToBackStack(null);
-                transaction3.commit();
-                setTitle(getString(R.string.food));
-                break;
-            case 4:
-                ActivitiesFragment activitiesFragment = new ActivitiesFragment();
-                FragmentTransaction transaction4 = getSupportFragmentManager().beginTransaction();
-                transaction4.replace(R.id.container, activitiesFragment);
-                transaction4.addToBackStack(null);
-                transaction4.commit();
-                setTitle(getString(R.string.activities));
-                break;
-            case 2:
-                TransportationFragment transportFragment = new TransportationFragment();
-                FragmentTransaction transaction5 = getSupportFragmentManager().beginTransaction();
-                transaction5.replace(R.id.container, transportFragment);
-                transaction5.addToBackStack(null);
-                transaction5.commit();
-                setTitle(getString(R.string.transport));
-                break;
-            case 6:
-                KaraokeFragment karaokeFragment = new KaraokeFragment();
-                FragmentTransaction transaction6 = getSupportFragmentManager().beginTransaction();
-                transaction6.replace(R.id.container, karaokeFragment);
-                transaction6.addToBackStack(null);
-                transaction6.commit();
-                setTitle(getString(R.string.karaoke));
-                break;
-            case 7:
-                ContactFragment contactFragment = new ContactFragment();
-                FragmentTransaction transaction7 = getSupportFragmentManager().beginTransaction();
-                transaction7.replace(R.id.container, contactFragment);
-                transaction7.addToBackStack(null);
-                transaction7.commit();
-                setTitle(getString(R.string.contact));
-                break;
-        }
-    }
 
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
@@ -217,41 +154,41 @@ public class MainActivity extends ActionBarActivity
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
-    }
+//    public static class PlaceholderFragment extends Fragment {
+//        /**
+//         * The fragment argument representing the section number for this
+//         * fragment.
+//         */
+//        private static final String ARG_SECTION_NUMBER = "section_number";
+//
+//        /**
+//         * Returns a new instance of this fragment for the given section
+//         * number.
+//         */
+//        public static PlaceholderFragment newInstance(int sectionNumber) {
+//            PlaceholderFragment fragment = new PlaceholderFragment();
+//            Bundle args = new Bundle();
+//            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+//            fragment.setArguments(args);
+//            return fragment;
+//        }
+//
+//        public PlaceholderFragment() {
+//        }
+//
+//        @Override
+//        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                                 Bundle savedInstanceState) {
+//            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+//            return rootView;
+//        }
+//
+//        @Override
+//        public void onAttach(Activity activity) {
+//            super.onAttach(activity);
+//            ((MainActivity) activity).onSectionAttached(
+//                    getArguments().getInt(ARG_SECTION_NUMBER));
+//        }
+//    }
 
 }

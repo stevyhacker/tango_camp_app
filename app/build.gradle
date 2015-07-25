@@ -32,4 +32,6 @@ dependencies {
     compile 'com.pixplicity.easyprefs:library:1.7'
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
     compile 'com.parse.bolts:bolts-android:1.+'
+    compile 'com.commonsware.cwac:merge:1.1.+'
+
 }

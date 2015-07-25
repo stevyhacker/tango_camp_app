@@ -1,13 +1,14 @@
 package me.montecode.app.summertangocamp.kolasin;
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by stevyhacker on 12.4.15..
  */
 public class Schedule extends RealmObject {
 
-
+    @PrimaryKey
     private String push_id;
     private String silent;
     private String alert;

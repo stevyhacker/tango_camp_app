@@ -53,5 +53,6 @@ Osim toga, u sklopu prostora u gimnaziji “Braća Selić” će raditi šank na
 </string>
     <string name="under_construction">U toku izrade</string>
     <string name="check_menu">Pogledajte meni sa lijeve strane za sve informacije</string>
+    <string name="notification_info">Aplikacija će vas obavjestiti kada raspored za sledeća tri dana bude objavljen.</string>
 
 </resources>
