@@ -13,7 +13,6 @@ public class Schedule extends RealmObject {
     private String silent;
     private String alert;
     private String additional_data;
-    private String sorter_date;
     private RealmList<Day> data;
 
     public String getPush_id() {
@@ -54,14 +53,5 @@ public class Schedule extends RealmObject {
 
     public void setAdditional_data(String additional_data) {
         this.additional_data = additional_data;
-    }
-
-
-    public String getSorter_date() {
-        return sorter_date;
-    }
-
-    public void setSorter_date(String sorter_date) {
-        this.sorter_date = sorter_date;
     }
 }

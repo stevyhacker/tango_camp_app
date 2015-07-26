@@ -103,10 +103,11 @@ public class MainActivity extends ActionBarActivity {
                 return;
             }
 
-            NotificationsFragment searchByGardenFragment = new NotificationsFragment();
-            searchByGardenFragment.setArguments(getIntent().getExtras());
+            NotificationsFragment notificationFragment = new NotificationsFragment();
+            notificationFragment.setArguments(getIntent().getExtras());
+
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, searchByGardenFragment).commit();
+                    .add(R.id.container, notificationFragment).commit();
 
         }
 
