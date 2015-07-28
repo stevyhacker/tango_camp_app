@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -62,13 +61,16 @@ public class MainActivity extends ActionBarActivity {
 
             Bundle extras = getIntent().getExtras();
             String notificationType = extras.getString("notification");
-            if (notificationType.equalsIgnoreCase("parse")) {
-                NotificationsFragment notificationFragment = new NotificationsFragment();
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.container, notificationFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-                setTitle(getString(R.string.notifications));
+            if (notificationType != null) {
+
+                if (notificationType.equalsIgnoreCase("parse")) {
+                    NotificationsFragment notificationFragment = new NotificationsFragment();
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.container, notificationFragment);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    setTitle(getString(R.string.notifications));
+                }
             }
         }
 
@@ -80,7 +82,6 @@ public class MainActivity extends ActionBarActivity {
 
             try {
 
-                Log.e("subscribedToChannel", Prefs.getString("subscribedToChannel", "English"));
                 if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
                     is = getAssets().open("schedule_25_27.json");
                 } else {
@@ -90,6 +91,17 @@ public class MainActivity extends ActionBarActivity {
                 realm.beginTransaction();
                 realm.createObjectFromJson(Schedule.class, is);
                 realm.commitTransaction();
+
+                if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
+                    is = getAssets().open("schedule_28_30.json");
+                } else {
+                    is = getAssets().open("raspored_28_30.json");
+                }
+
+                realm.beginTransaction();
+                realm.createObjectFromJson(Schedule.class, is);
+                realm.commitTransaction();
+
 
                 Prefs.putBoolean("jsonInputDone", true);
             } catch (IOException e) {

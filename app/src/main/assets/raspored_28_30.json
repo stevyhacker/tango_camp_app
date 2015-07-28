@@ -1,0 +1,83 @@
+{
+    "push_id": "2",
+    "silent": "false",
+    "alert": "Objavljen raspored za 28, 29 i 30 jul",
+    "additional_data": "Postoji opcija jahanja tokom ova tri dana – ukoliko ste zainteresovani molim vas da se prijavite na registracijskom pultu i obavestićemo vas o detaljima. *Okupljanja za sve aktivnosti u prirodi kao i polaske na izlete u toku tango kampa će uvijek biti ispred Centra za kulturu osim ako bude najavljeno drugačije. Takođe, kreće se na određenu destinaciju tačno u vreme koje je navedeno.",
+    "data": [
+        {
+            "day": "Utorak, 28. 07.2015.",
+            "activities": [
+                {
+                    "description": "11:00 - 12:30     Joga      Osnovna škola"
+                },
+                {
+                    "description": "11:30  - 14:30      Praktika      Gimnazija"
+                },
+                {
+                    "description": "12:45 – 13:45     Kreativno plesna radionica za decu     Osnovna škola"
+                },
+                {
+                    "description": "16:30 – 18:00     Čas za potpune početnike/ Miko y Marija    Osnovna škola"
+                },
+                {
+                    "description": "16:30 – 18:00   Čas za srednji i viši nivo/ Darko y Sonja  Gimnazija"
+                },
+                {
+                    "description": "18:15 – 19:45     Čas ženske tehnike/ Sonja    Gimnazija"
+                },
+                {
+                    "description": "18:10 do smrkavanja   Streličarstvo   (luk i strela)  okupljanje*"
+                },
+                {
+                    "description": "22:00 – 02:00     Milonga, DJ Duo :P Sonja & Flegma     Gimnazija"
+                }
+            ]
+        },
+        {
+            "day": "Sreda,29.07.2015.",
+            "activities": [
+                {
+                    "description": "10:00 - 11:30     Joga      Osnovna škola"
+                },
+                {
+                    "description": "11:45       Izlet na Biogradsko jezero   Opcije:  1. tura kroz prašumu do katuna Goleš i ručak u katunu   2. šetnja oko jezera, odlazak na izvidnicu, čamci, streličarstvo, joga...  / Ako neko želi da ostane i pleše u Kolašinu potrebno je da se prijavi u utorak do 23h  najkasnije: ukoliko se prijavi 10+ ljudi biće organizovana i praktika u Kolašinu/"
+                },
+                {
+                    "description": "22:00 – 02:00     Milonga, DJ Duo :P  Sonja & Flegma"
+                }
+            ]
+        },
+        {
+            "day": "Četvrtak, 30.07.2015.",
+            "activities": [
+                {
+                    "description": "11:30 - 13:00     Joga     Osnovna škola"
+                },
+                {
+                    "description": "11:30 - 13:30      Rad na telu u prirodi        okupljanje ispred Doma kulture*"
+                },
+                {
+                    "description": "12:00 – 15:00       Praktika            Gimnazija"
+                },
+                {
+                    "description": "13:00 – 14:00  Kreativno plesna radionica za djecu     Osnovna škola"
+                },
+                {
+                    "description": "14:00    Streličarstvo za djecu     okupljanje u osnovnoj školi"
+                },
+                {
+                    "description": "17:00 – 18:30  Čas za potpune početnike     / Mirko y Marija     Gimnazija"
+                },
+                {
+                    "description": "17:00 – 18:30  Čas tehnike za žene i muškarce  / Nataša    Osnovna škola"
+                },
+                {
+                    "description": "18:30 – 20:00  Čas za srednji i viši nivo      Gimnazija"
+                },
+                {
+                    "description": "22:00 – 02:00  Milonga, DJa objavljujemo u sredu      Gimnazija"
+                }
+            ]
+        }
+    ]
+}

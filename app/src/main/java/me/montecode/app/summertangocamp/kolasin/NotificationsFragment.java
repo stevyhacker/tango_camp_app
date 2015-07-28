@@ -59,13 +59,14 @@ public class NotificationsFragment extends Fragment {
         topTextView.setText(getString(R.string.notification_info));
 
         mergeAdapter.addView(topTextView);
-
+        notificationType = "regular";
         Bundle bundle = this.getArguments();
         if (bundle != null) {
-            notificationType = bundle.getString("notification");
-        }
-        Log.e("PUSHNOTIFICATIONTIP", notificationType);
+            if(bundle.getString("notification")!=null) {
+                notificationType = bundle.getString("notification");
+            }
 
+        }
         if (!notificationType.equalsIgnoreCase("parse")) {
             for (Schedule schedule : scheduleRealmResults) {
 
@@ -106,7 +107,11 @@ public class NotificationsFragment extends Fragment {
             scheduleListView.setAdapter(mergeAdapter);
 
             return view;
-        } else {
+
+        }
+
+        else {
+
             Log.e("SINGLENOTIFICATIONTIP", notificationType);
 
             Schedule schedule = scheduleRealmResults.first();
@@ -142,6 +147,7 @@ public class NotificationsFragment extends Fragment {
             AdditionalDataAdapter additionalDataAdapter = new AdditionalDataAdapter(getActivity().getApplicationContext(), R.layout.notification_list_item_add_data, new ArrayList<String>(additionalData));
             mergeAdapter.addAdapter(additionalDataAdapter);
             return view;
+
         }
 
     }

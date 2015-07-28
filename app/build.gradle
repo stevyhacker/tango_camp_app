@@ -9,8 +9,8 @@ android {
         multiDexEnabled true
         minSdkVersion 9
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
     }
     buildTypes {
         release {
@@ -24,14 +24,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile fileTree(dir: 'libs', include: 'Parse-*.jar')
     compile fileTree(dir: 'libs', include: 'ParseCrashReporting-*.jar')
-
-
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.android.support:support-v4:22.2.1'
-    compile 'io.realm:realm-android:0.81.1'
     compile 'com.pixplicity.easyprefs:library:1.7'
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
     compile 'com.parse.bolts:bolts-android:1.+'
     compile 'com.commonsware.cwac:merge:1.1.+'
-
 }
