@@ -31,6 +31,7 @@ public class MainActivity extends ActionBarActivity {
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,11 +77,52 @@ public class MainActivity extends ActionBarActivity {
             }
         }
 
-        Realm realm = Realm.getInstance(this);
+
+
         InputStream is = null;
 
+        if(!Prefs.getBoolean("firstTime",false)){
+            Realm.deleteRealmFile(getApplicationContext());
+            realm = Realm.getInstance(this);
+
+            Prefs.putBoolean("firstTime",true);
+            Prefs.putBoolean("inputDone", true);
+            try {
+
+                if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
+                    is = getAssets().open("schedule_25_27.json");
+                } else {
+                    is = getAssets().open("raspored_25_27.json");
+                }
+
+                realm.beginTransaction();
+                realm.createObjectFromJson(Schedule.class, is);
+                realm.commitTransaction();
+
+                if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
+                    is = getAssets().open("schedule_28_30.json");
+                } else {
+                    is = getAssets().open("raspored_28_30.json");
+                }
+
+                realm.beginTransaction();
+                realm.createObjectFromJson(Schedule.class, is);
+                realm.commitTransaction();
+
+
+                Prefs.putBoolean("jsonInputDone", true);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        realm = Realm.getInstance(this);
+
         boolean jsonInputDone = Prefs.getBoolean("jsonInputDone", false);
-        if (!jsonInputDone) {
+        boolean inputDone = Prefs.getBoolean("inputDone", false);
+
+        if (!jsonInputDone && !inputDone) {
 
             try {
 
