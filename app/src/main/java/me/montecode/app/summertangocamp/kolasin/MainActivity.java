@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.parse.ParseAnalytics;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import java.io.IOException;
@@ -64,6 +65,7 @@ public class MainActivity extends ActionBarActivity {
             if (notificationType != null) {
 
                 if (notificationType.equalsIgnoreCase("parse")) {
+                    ParseAnalytics.trackAppOpenedInBackground(getIntent());
                     NotificationsFragment notificationFragment = new NotificationsFragment();
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                     transaction.replace(R.id.container, notificationFragment);
