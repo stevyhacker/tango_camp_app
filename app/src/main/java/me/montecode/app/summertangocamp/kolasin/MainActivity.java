@@ -110,6 +110,16 @@ public class MainActivity extends ActionBarActivity {
                 realm.commitTransaction();
 
 
+                if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
+                    is = getAssets().open("schedule_31_2.json");
+                } else {
+                    is = getAssets().open("raspored_31_2.json");
+                }
+
+                realm.beginTransaction();
+                realm.createObjectFromJson(Schedule.class, is);
+                realm.commitTransaction();
+
                 Prefs.putBoolean("jsonInputDone", true);
             } catch (IOException e) {
                 e.printStackTrace();

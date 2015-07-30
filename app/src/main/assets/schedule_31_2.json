@@ -1,0 +1,81 @@
+{
+    "push_id": "3",
+    "silent": "false",
+    "alert": "Schedule for 31.07/02.08",
+    "additional_data": "Horse riding will be optional during the whole camp – if interested please sign up at the registration desk and we will inform  you about the details. * All gatherings for gifferent outdoor acctivities and for departures for day trips during the tango camp  will always be in front of the Culture center, except when announced otherwise. Also, departure to each destination will be exactly on the specified times.",
+    "data": [
+        {
+            "day": "Friday, 31. 07.2015.",
+            "activities": [
+                {
+                    "description": "11:00 – 12:30    Body work in nature    gathering*"
+                },
+                {
+                    "description": "11:30 - 13:00    Yoga    Primary school"
+                },
+                {
+                    "description": "12:30     Archery      gathering * / who goes to Body work just stays at the same spot"
+                },
+                {
+                    "description": "13:00 – 14:00     Creative – dancing workshop for kids     Primary school"
+                },
+                {
+                    "description": "17:00 – 18:30    Class for complete beginners  / Miko y Marija    Primary school"
+                },
+                {
+                    "description": "17:00 – 18:30    Workshop for beginner and intermediate level / Miloš y Nataša     High school"
+                },
+                {
+                    "description": "18:45 – 20:00     Tango aerobics/ Sonja y Irena    High school"
+                },
+                {
+                    "description": "22:00 – 02:00     Milonga, DJ Duo :P Sonja & Flegma     High school"
+                }
+            ]
+        },
+        {
+            "day": "Saturday, 01.08.2015.",
+            "activities": [
+                {
+                    "description": "11:30 – 13:00     Body work in the nature    gathering*"
+                },
+                {
+                    "description": "11:30 – 13:00     Yoga    Primary school"
+                },
+                {
+                    "description": "12:00 – 15:00    Practica    High school"
+                },
+                {
+                    "description": "13:00 – 14:00    Creative - dancing workshop for kids    Primary school"
+                },
+                {
+                    "description": "17:00 – 18:30    Tango class for complete beginners / Mirko y Marija    High school"
+                },
+                {
+                    "description": "17:00 – 18:30    Workshop for intermediate and advanced level / Darko y Sonja    Primary school"
+                },
+                {
+                    "description": "18:30 – 20:00    Workshop for beginners and intermediate level / Miloš y Nataša    High school"
+                },
+                {
+                    "description": "18:30    Short cycling tour     gathering*"
+                },
+                {
+                    "description": "22:00 – 02:00    Milonga, DJ will be announced on Friday latest     High school"
+                }
+            ]
+        },
+        {
+            "day": "Sunday, 02.08.2015.",
+            "activities": [
+                {
+                    "description": "10:00 – 11:30  Yoga"
+                },
+                {
+                    "description": "11:45    Excursion to Ski center Kolašin 1450  Options: 1. chill out at cafe restaurant Ski center Kolašin 1450  2. going to the top of the mountains with the ski-lift ( 3 eur ) , short walk to katun Klisura and launch in katun  After that open milonga until the sun goes down DJ Sonja / If someone wants to stay and dance in Kolašin it is obligatory to come and sign up at the registration desk latest by 23:00 on Saturday: if there will be 10+ people interested in staying we will organize practica /"
+                }
+               
+            ]
+        }
+    ]
+}
