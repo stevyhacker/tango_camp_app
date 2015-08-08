@@ -1,0 +1,84 @@
+{
+    "push_id": "4",
+    "silent": "false",
+    "alert": "Schedule for 9-11 August",
+    "additional_data": "Horse riding will be optional during the whole camp – if interested please sign up at the registration desk and we will inform  you about the details. * All gatherings for gifferent outdoor acctivities and for departures for day trips during the tango camp  will always be in front of the Culture center, except when announced otherwise. Also, departure to each destination will be exactly on the specified times.",
+    "data": [
+        {
+            "day": "Sunday, 09.08.2015.",
+            "activities": [
+                {
+                    "description": "10:00 – 11:30  Yoga  Primary school"
+                },
+                {
+                    "description": "11:45  Excursion to Ski center Kolašin 1450   Options: gathering* 1. chill out at cafe restaurant Ski center Kolašin 1450 2. going to the top of the mountains with the ski-lift ( 3 eur ) , short hiking tour  After that open milonga until the sun goes down    DJ Sonja / If someone wants to stay and dance in Kolašin it is obligatory to come and sign up at the registration desk latest by 23:00 on Saturday: if there will be 10+ people interested in staying we will organize practica "
+                },
+                {
+                    "description": "22:00 – 02:00  Milonga    DJ will be announced   High school"
+                }
+            ]
+        },
+        {
+            "day": "Monday, 10.08.2015.",
+            "activities": [
+                {
+                    "description": "08:00   The whole day hiking tour to Komovi   gathering*"
+                },
+                {
+                    "description": "11:30 – 13:00  Yoga  Primary school"
+                },
+                {
+                    "description": "14:00 – 18:00  Practica   High school"
+                },
+                {
+                    "description": "13:00 – 14:00  Creative - dancing workshop for kids /Milena  Primary school"
+                },
+                {
+                    "description": "17:00 – 18:30  Tango class for complete beginners / Mirko y Marija       High school"
+                },
+                {
+                    "description": "17:00 – 18:30  Tango technique  / Calliope   Primary school"
+                },
+                {
+                    "description": "18:45 – 20:00  Tango aerobics  /Sonja    Primary school"
+                },
+                {
+                    "description": "22:00   Tango cinema   sponsors: Tango Vida, Bratislava  High school   after that hanging out, drinking, maybe guitar, dance..."
+                }
+            ]
+        },
+        {
+            "day": "Tuesday, 11.08.2015.",
+            "activities": [
+                {
+                    "description": "11:30 – 13:00  Yoga  Primary school"
+                },
+                {
+                    "description": "11:30 – 13:00  Body work in the nature  /Darko   gathering*"
+                },              
+                {
+                    "description": "13:00 – 14:00   Creative - dancing workshop for kids  / Milena  Primary school"
+                },
+                {
+                    "description": "13:15 – 15:00  Let’s drink cofee and talk about tango / Sonja   okupljanje"
+                },
+                {
+                    "description": "14:00 – 15:30  Tango class for beginner and intermediate level    / Mioš y Calliope        High school"
+                },
+                {
+                    "description": "15:30 – 17:00  Tango class for complete beginners / Mirko y Marija        High school"
+                },
+                {
+                    "description": "17:00 – 18:30   Chacarera class  /Paula   High school"
+                },
+                {
+                    "description": "19:00    Street milonga: TANGUANGO  LIVE!! :D"
+                },
+                {
+                    "description": "22:00 - 02:00  Milonga, DJ will be announced   High school"
+                }
+               
+            ]
+        }
+    ]
+}

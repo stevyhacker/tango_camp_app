@@ -90,30 +90,9 @@ public class MainActivity extends ActionBarActivity {
             try {
 
                 if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
-                    is = getAssets().open("schedule_25_27.json");
+                    is = getAssets().open("schedule_9_11.json");
                 } else {
-                    is = getAssets().open("raspored_25_27.json");
-                }
-
-                realm.beginTransaction();
-                realm.createObjectFromJson(Schedule.class, is);
-                realm.commitTransaction();
-
-                if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
-                    is = getAssets().open("schedule_28_30.json");
-                } else {
-                    is = getAssets().open("raspored_28_30.json");
-                }
-
-                realm.beginTransaction();
-                realm.createObjectFromJson(Schedule.class, is);
-                realm.commitTransaction();
-
-
-                if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
-                    is = getAssets().open("schedule_31_2.json");
-                } else {
-                    is = getAssets().open("raspored_31_2.json");
+                    is = getAssets().open("raspored_9_11.json");
                 }
 
                 realm.beginTransaction();
@@ -137,19 +116,9 @@ public class MainActivity extends ActionBarActivity {
             try {
 
                 if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
-                    is = getAssets().open("schedule_25_27.json");
+                    is = getAssets().open("schedule_9_11.json");
                 } else {
-                    is = getAssets().open("raspored_25_27.json");
-                }
-
-                realm.beginTransaction();
-                realm.createObjectFromJson(Schedule.class, is);
-                realm.commitTransaction();
-
-                if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
-                    is = getAssets().open("schedule_28_30.json");
-                } else {
-                    is = getAssets().open("raspored_28_30.json");
+                    is = getAssets().open("raspored_9_11.json");
                 }
 
                 realm.beginTransaction();
