@@ -99,6 +99,18 @@ public class MainActivity extends ActionBarActivity {
                 realm.createObjectFromJson(Schedule.class, is);
                 realm.commitTransaction();
 
+                if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
+                    is = getAssets().open("schedule_12_14.json");
+                } else {
+                    is = getAssets().open("raspored_12_14.json");
+                }
+
+                realm.beginTransaction();
+                realm.createObjectFromJson(Schedule.class, is);
+                realm.commitTransaction();
+
+
+
                 Prefs.putBoolean("jsonInputDone", true);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -119,6 +131,16 @@ public class MainActivity extends ActionBarActivity {
                     is = getAssets().open("schedule_9_11.json");
                 } else {
                     is = getAssets().open("raspored_9_11.json");
+                }
+
+                realm.beginTransaction();
+                realm.createObjectFromJson(Schedule.class, is);
+                realm.commitTransaction();
+
+                if (Prefs.getString("subscribedToChannel", "English").equalsIgnoreCase("English")) {
+                    is = getAssets().open("schedule_12_14.json");
+                } else {
+                    is = getAssets().open("raspored_12_14.json");
                 }
 
                 realm.beginTransaction();

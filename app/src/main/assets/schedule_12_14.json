@@ -1,0 +1,90 @@
+{
+    "push_id": "5",
+    "silent": "false",
+    "alert": "Schedule for 12-14 August",
+    "additional_data": "Horse riding will be optional during the whole camp – if interested please sign up at the registration desk and we will inform  you about the details.* All gatherings for gifferent outdoor acctivities and for departures for day trips during the tango camp  will always be in front of the Culture center, except when announced otherwise. Also, departure to each destination will be exactly on the specified times.",
+    "data": [
+        {
+            "day": "Wednesday, 12.08.2015.",
+            "activities": [
+            	 {
+                    "description": "11:00 – 13:00  Body work in the nature / Darko    gathering*"
+                },
+                {
+                    "description": "11:30 – 13:00  Yoga  / Ljubica   Primary school"
+                },
+                {
+                    "description": "12:00 – 15:00  Practica   High school"
+                },
+                {
+                    "description": "13:00 – 14:00  Creative - dancing workshop for kids/  Milena   Primary school"
+                },
+                {
+                    "description": "17:00 – 18:30  Tango class for complete beginners/  Mirko y Marija    High school"
+                },
+                {
+                    "description": "17:00 – 18:30   Workshop for intermediate and advanced dancers    /  Darko y Sonja        Primary school"
+                },       
+                {
+                    "description": "18:00   Short cycling tour   gathering*"
+                },
+                {
+                    "description": "18:45 – 20:00  Tango aerobics    / Irena y Sonja   Primary school"
+                },       
+                {
+                    "description": "18:30 – 20:00  Chacarera/  Paula    Primary school"
+                },
+                {
+                    "description": "22:00 – 02:00   Milonga, DJ Paula    High school"
+                }
+            ]
+        },
+        {
+            "day": "Thursday, 13.08.2015.",
+            "activities": [               
+                {
+                    "description": "10:00 - 11:30     Yoga"
+                },
+                {
+                    "description": "11:45   Excursion to National park Biogradska gora    Options:  1. tour through virgin forest to katun Golesh launch in katun  2.walking by the lake, boats, yoga, talks about tango by the lake... / If someone wants to stay and dance in Kolašin it is obligatory to come and sign up at the registration desk during milonga on Wednesday: if there will be 10+ people interested in staying we will organize practica /"
+                },
+                {
+                    "description": "22:00 – 02:00    Milonga  DJ Sonja    High school"
+                }
+            ]
+        },
+        {
+            "day": "Friday, 14.08.2015.",
+            "activities": [
+                {
+                    "description": "11:00 – 12:30  Yoga"
+                },
+                {
+                    "description": "11:00 – 12:30  Body work in the nature/ Darko    gathering*"
+                },              
+                {
+                    "description": "12:45 – 14:15  Cofee & talks about tango   / Sonja    cafe Balkan"
+                },
+                {
+                    "description": "13:00 – 14:00  Creative - dancing workshop for kids/ Milena   Primary school"
+                },
+                {
+                    "description": "14:30 – 16:00  Tango technique for all levels / Darko y Sonja    High school"
+                },
+                {
+                    "description": "16:00 – 17:30  Tango class for complete beginners /  Mirko y Marija   High school"
+                },
+                {
+                    "description": "18:00 – 19:30  Chacarera/  Paula   Osnovna škola"
+                },
+                {
+                    "description": "18:30 – 20:00  Workshop for intermédiate and advanced level/  Darko y Sonja   High school"
+                },
+                {
+                    "description": "22:00 - 02:00  Milonga, DJ will be announced   High school"
+                }
+               
+            ]
+        }
+    ]
+}
